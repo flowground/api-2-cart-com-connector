@@ -1,0 +1,87 @@
+{
+    "type": "object",
+    "properties": {
+        "code": {
+            "required": true,
+            "type": "string"
+        },
+        "action_type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "percent",
+                "fixed"
+            ]
+        },
+        "action_apply_to": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "order_total",
+                "item_price",
+                "shipping"
+            ]
+        },
+        "action_scope": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "order",
+                "matching_items"
+            ]
+        },
+        "action_amount": {
+            "required": true,
+            "type": "number"
+        },
+        "date_start": {
+            "required": false,
+            "type": "string",
+            "default": "Current date and time"
+        },
+        "date_end": {
+            "required": false,
+            "type": "string"
+        },
+        "usage_limit": {
+            "required": false,
+            "type": "integer"
+        },
+        "usage_limit_per_customer": {
+            "required": false,
+            "type": "integer"
+        },
+        "action_condition_entity": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "order",
+                "order_shipping_address",
+                "product",
+                "customer"
+            ]
+        },
+        "action_condition_key": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "product_id",
+                "category_id",
+                "variant_id",
+                "country"
+            ]
+        },
+        "action_condition_operator": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "ONE_OF",
+                "=="
+            ]
+        },
+        "action_condition_value": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

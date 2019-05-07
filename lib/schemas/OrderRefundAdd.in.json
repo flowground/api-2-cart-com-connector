@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "date": {
+                    "description": "Specifies an order creation date in format Y-m-d H:i:s",
+                    "type": "string"
+                },
+                "fee_price": {
+                    "description": "Specifies refund's fee price",
+                    "type": "number"
+                },
+                "item_restock": {
+                    "default": false,
+                    "description": "Boolean, whether or not to add the line items back to the store inventory.",
+                    "type": "boolean"
+                },
+                "items": {
+                    "description": "Defines items in the order that will be shipped",
+                    "items": {
+                        "properties": {
+                            "order_product_id": {
+                                "type": "string"
+                            },
+                            "price": {
+                                "type": "number"
+                            },
+                            "quantity": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "message": {
+                    "description": "Refund reason, or some else message which assigned to refund.",
+                    "type": "string"
+                },
+                "order_id": {
+                    "description": "Defines the order for which the refund will be created.",
+                    "type": "string"
+                },
+                "send_notifications": {
+                    "default": false,
+                    "description": "Send notifications to customer after refund was created",
+                    "type": "boolean"
+                },
+                "shipping_price": {
+                    "default": 0,
+                    "description": "Defines refund shipping amount.",
+                    "type": "number"
+                },
+                "total_price": {
+                    "description": "Defines order refund amount.",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "order_id"
+            ],
+            "type": "object"
+        }
+    }
+}

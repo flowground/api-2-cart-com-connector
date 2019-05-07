@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "text",
+                "select",
+                "textarea",
+                "date",
+                "price",
+                "multiselect",
+                "boolean"
+            ]
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "lang_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "visible": {
+            "required": false,
+            "type": "boolean"
+        },
+        "required": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

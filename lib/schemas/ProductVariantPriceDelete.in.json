@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "group_prices": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

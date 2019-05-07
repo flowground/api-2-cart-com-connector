@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "amount": {
+            "required": true,
+            "type": "number"
+        },
+        "code": {
+            "required": false,
+            "type": "string"
+        },
+        "owner_email": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

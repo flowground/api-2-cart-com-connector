@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "option_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "option_value": {
+            "required": true,
+            "type": "string"
+        },
+        "sort_order": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        }
+    }
+}

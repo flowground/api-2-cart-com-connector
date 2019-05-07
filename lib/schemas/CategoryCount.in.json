@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "parent_id": {
+            "required": false,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "lang_id": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

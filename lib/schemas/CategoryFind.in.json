@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "find_value": {
+            "required": true,
+            "type": "string"
+        },
+        "find_where": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "name",
+                "description"
+            ],
+            "default": "name"
+        },
+        "find_params": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "regex",
+                "case_sensitive",
+                "whole_words"
+            ],
+            "default": "whole_words"
+        }
+    }
+}

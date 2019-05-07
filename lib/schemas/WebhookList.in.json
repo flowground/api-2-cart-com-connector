@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "id,entity,action,callback"
+        },
+        "start": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "entity": {
+            "required": false,
+            "type": "string"
+        },
+        "action": {
+            "required": false,
+            "type": "string"
+        },
+        "active": {
+            "required": false,
+            "type": "boolean"
+        },
+        "ids": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

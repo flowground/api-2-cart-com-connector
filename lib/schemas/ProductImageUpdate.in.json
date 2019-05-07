@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "product_id": {
+            "required": true,
+            "type": "string"
+        },
+        "image_name": {
+            "required": false,
+            "type": "string"
+        },
+        "type": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "small",
+                "base",
+                "additional",
+                "thumbnail"
+            ],
+            "default": "additional"
+        },
+        "label": {
+            "required": false,
+            "type": "string"
+        },
+        "position": {
+            "required": false,
+            "type": "integer"
+        },
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "hidden": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "start": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "ids": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

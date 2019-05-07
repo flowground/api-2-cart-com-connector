@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "id,url,store_key,cart_id,requests_count"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        },
+        "request_from_date": {
+            "required": false,
+            "type": "string"
+        },
+        "request_to_date": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

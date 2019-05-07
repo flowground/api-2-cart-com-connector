@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "entity": {
+            "required": false,
+            "type": "string"
+        },
+        "action": {
+            "required": false,
+            "type": "string"
+        },
+        "active": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

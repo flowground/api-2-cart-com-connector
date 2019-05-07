@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "iso3": {
+            "required": true,
+            "type": "string"
+        },
+        "rate": {
+            "required": true,
+            "type": "number"
+        },
+        "name": {
+            "required": false,
+            "type": "string"
+        },
+        "avail": {
+            "required": false,
+            "type": "boolean",
+            "default": true
+        },
+        "symbol_left": {
+            "required": false,
+            "type": "string"
+        },
+        "symbol_right": {
+            "required": false,
+            "type": "string"
+        },
+        "default": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "order_id": {
+            "required": true,
+            "type": "string"
+        },
+        "start": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "id,order_id,tracking_numbers"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        },
+        "created_from": {
+            "required": false,
+            "type": "string"
+        },
+        "created_to": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

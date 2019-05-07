@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "date_start_from": {
+            "required": false,
+            "type": "string"
+        },
+        "date_start_to": {
+            "required": false,
+            "type": "string"
+        },
+        "date_end_from": {
+            "required": false,
+            "type": "string"
+        },
+        "date_end_to": {
+            "required": false,
+            "type": "string"
+        },
+        "avail": {
+            "required": false,
+            "type": "boolean",
+            "default": true
+        }
+    }
+}

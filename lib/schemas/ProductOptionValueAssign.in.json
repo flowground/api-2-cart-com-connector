@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "product_option_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "option_value_id": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

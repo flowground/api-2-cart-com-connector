@@ -1,0 +1,123 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "text",
+                "select",
+                "textarea",
+                "date",
+                "price",
+                "multiselect",
+                "boolean"
+            ]
+        },
+        "name": {
+            "required": true,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "lang_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "visible": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "position": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "is_global": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Global",
+                "Store",
+                "Website"
+            ],
+            "default": "Store"
+        },
+        "is_searchable": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "is_filterable": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Filterable (with results)",
+                "Filterable (no results)",
+                "No"
+            ],
+            "default": "No"
+        },
+        "is_comparable": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "is_html_allowed_on_front": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "is_filterable_in_search": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "is_configurable": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "is_visible_in_advanced_search": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "is_used_for_promo_rules": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "used_in_product_listing": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "used_for_sort_by": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "apply_to": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "simple",
+                "configurable",
+                "virtual",
+                "bundle",
+                "downloadable",
+                "all_types"
+            ],
+            "default": "all_types"
+        }
+    }
+}

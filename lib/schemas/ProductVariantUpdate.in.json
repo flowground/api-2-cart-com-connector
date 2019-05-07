@@ -1,0 +1,75 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "product_id": {
+            "required": true,
+            "type": "string"
+        },
+        "quantity": {
+            "required": false,
+            "type": "number"
+        },
+        "price": {
+            "required": false,
+            "type": "number"
+        },
+        "special_price": {
+            "required": false,
+            "type": "number"
+        },
+        "manage_stock": {
+            "required": false,
+            "type": "boolean"
+        },
+        "name": {
+            "required": true,
+            "type": "string"
+        },
+        "sku": {
+            "required": false,
+            "type": "string"
+        },
+        "meta_title": {
+            "required": false,
+            "type": "string"
+        },
+        "meta_description": {
+            "required": false,
+            "type": "string"
+        },
+        "meta_keywords": {
+            "required": false,
+            "type": "string"
+        },
+        "description": {
+            "required": false,
+            "type": "string"
+        },
+        "short_description": {
+            "required": false,
+            "type": "string"
+        },
+        "visible": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "nowhere",
+                "catalog",
+                "search",
+                "everywhere"
+            ]
+        },
+        "status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "enabled",
+                "disabled"
+            ]
+        }
+    }
+}

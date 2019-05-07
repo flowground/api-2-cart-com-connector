@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "id,name,description,price,categories_ids"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "lang_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "product_variant_params": {
+            "required": false,
+            "type": "string",
+            "default": "force_all"
+        },
+        "report_request_id": {
+            "required": false,
+            "type": "string"
+        },
+        "disable_report_cache": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

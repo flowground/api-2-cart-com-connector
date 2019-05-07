@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "store_name,store_url,db_prefix"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

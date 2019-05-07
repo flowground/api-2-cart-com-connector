@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "start": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "product_id": {
+            "required": true,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "approved",
+                "pending",
+                "disapproved"
+            ]
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "id,customer_id,email,message,status"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

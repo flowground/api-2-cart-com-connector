@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "lang_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "force_all"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,299 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "admin_comment": {
+                    "description": "Specifies admin's order comment",
+                    "type": "string"
+                },
+                "bill_address_1": {
+                    "description": "Specifies first billing address",
+                    "type": "string"
+                },
+                "bill_address_2": {
+                    "description": "Specifies second billing address",
+                    "type": "string"
+                },
+                "bill_city": {
+                    "description": "Specifies billing city",
+                    "type": "string"
+                },
+                "bill_company": {
+                    "description": "Specifies billing company",
+                    "type": "string"
+                },
+                "bill_country": {
+                    "description": "Specifies billing country code",
+                    "type": "string"
+                },
+                "bill_fax": {
+                    "description": "Specifies billing fax",
+                    "type": "string"
+                },
+                "bill_first_name": {
+                    "description": "Specifies billing first name",
+                    "type": "string"
+                },
+                "bill_last_name": {
+                    "description": "Specifies billing last name",
+                    "type": "string"
+                },
+                "bill_phone": {
+                    "description": "Specifies billing phone",
+                    "type": "string"
+                },
+                "bill_postcode": {
+                    "description": "Specifies billing postcode",
+                    "type": "string"
+                },
+                "bill_state": {
+                    "description": "Specifies billing state code",
+                    "type": "string"
+                },
+                "comment": {
+                    "description": "Specifies order comment",
+                    "type": "string"
+                },
+                "coupon_discount": {
+                    "default": 0,
+                    "description": "Specifies order's coupon discount",
+                    "type": "number"
+                },
+                "currency": {
+                    "description": "Currency code of order",
+                    "type": "string"
+                },
+                "customer_birthday": {
+                    "description": "Specifies customer’s birthday",
+                    "type": "string"
+                },
+                "customer_email": {
+                    "description": "Defines the customer specified by email for whom order has to be created",
+                    "type": "string"
+                },
+                "customer_fax": {
+                    "description": "Specifies customer’s fax",
+                    "type": "string"
+                },
+                "customer_first_name": {
+                    "description": "Specifies customer's first name",
+                    "type": "string"
+                },
+                "customer_last_name": {
+                    "description": "Specifies customer’s last name",
+                    "type": "string"
+                },
+                "customer_phone": {
+                    "description": "Specifies customer’s phone",
+                    "type": "string"
+                },
+                "date": {
+                    "description": "Specifies an order creation date in format Y-m-d H:i:s",
+                    "type": "string"
+                },
+                "date_finished": {
+                    "description": "Specifies order's  finished date",
+                    "type": "string"
+                },
+                "date_modified": {
+                    "description": "Specifies order's  modification date",
+                    "type": "string"
+                },
+                "discount": {
+                    "default": 0,
+                    "description": "Specifies order's discount",
+                    "type": "number"
+                },
+                "financial_status": {
+                    "description": "Create order with financial status",
+                    "enum": [
+                        "pending",
+                        "authorized",
+                        "partially_paid",
+                        "paid",
+                        "partially_refunded",
+                        "refunded",
+                        "voided"
+                    ],
+                    "type": "string"
+                },
+                "fulfillment_status": {
+                    "description": "Create order with fulfillment status",
+                    "enum": [
+                        "fulfilled",
+                        "null",
+                        "partial"
+                    ],
+                    "type": "string"
+                },
+                "gift_certificate_discount": {
+                    "default": 0,
+                    "description": "Discounts for order with gift certificates",
+                    "type": "number"
+                },
+                "order_id": {
+                    "description": "Defines the order id if it is supported by the cart",
+                    "type": "string"
+                },
+                "order_item": {
+                    "items": {
+                        "properties": {
+                            "order_item_id": {
+                                "description": "Defines orders specified by order item id",
+                                "type": "string"
+                            },
+                            "order_item_model": {
+                                "description": "Defines orders specified by order item model",
+                                "type": "string"
+                            },
+                            "order_item_name": {
+                                "description": "Defines orders specified by order item name",
+                                "type": "string"
+                            },
+                            "order_item_option": {
+                                "items": {
+                                    "properties": {
+                                        "order_item_option_name": {
+                                            "description": "Ordered Product Option Name. Where x is order item ID, y is order item option ID",
+                                            "type": "string"
+                                        },
+                                        "order_item_option_price": {
+                                            "description": "Ordered product option price Where x is order item ID, y - order item option ID",
+                                            "type": "number"
+                                        },
+                                        "order_item_option_value": {
+                                            "description": "Ordered product option value Where x is order item ID, y - order item option ID",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "order_item_price": {
+                                "description": "Defines orders specified by order item price",
+                                "type": "number"
+                            },
+                            "order_item_quantity": {
+                                "description": "Defines orders specified by order item quantity",
+                                "type": "integer"
+                            },
+                            "order_item_tax": {
+                                "default": 0,
+                                "description": "Percentage of tax for product order",
+                                "type": "number"
+                            },
+                            "order_item_variant_id": {
+                                "description": "Ordered product variant. Where x is order item ID",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "order_payment_method": {
+                    "description": "Defines order payment method",
+                    "type": "string"
+                },
+                "order_shipping_method": {
+                    "description": "Defines order shipping method",
+                    "type": "string"
+                },
+                "order_status": {
+                    "description": "Defines order status.",
+                    "type": "string"
+                },
+                "send_notifications": {
+                    "default": false,
+                    "description": "Send notifications to customer after order was created",
+                    "type": "boolean"
+                },
+                "shipp_address_1": {
+                    "description": "Specifies first shipping address",
+                    "type": "string"
+                },
+                "shipp_address_2": {
+                    "description": "Specifies second shipping address",
+                    "type": "string"
+                },
+                "shipp_city": {
+                    "description": "Specifies shipping city",
+                    "type": "string"
+                },
+                "shipp_company": {
+                    "description": "Specifies shipping company",
+                    "type": "string"
+                },
+                "shipp_country": {
+                    "description": "Specifies shipping country code",
+                    "type": "string"
+                },
+                "shipp_fax": {
+                    "description": "Specifies shipping fax",
+                    "type": "string"
+                },
+                "shipp_first_name": {
+                    "description": "Specifies shipping first name",
+                    "type": "string"
+                },
+                "shipp_last_name": {
+                    "description": "Specifies shipping last name",
+                    "type": "string"
+                },
+                "shipp_phone": {
+                    "description": "Specifies shipping phone",
+                    "type": "string"
+                },
+                "shipp_postcode": {
+                    "description": "Specifies shipping postcode",
+                    "type": "string"
+                },
+                "shipp_state": {
+                    "description": "Specifies shipping state code",
+                    "type": "string"
+                },
+                "shipping_price": {
+                    "default": 0,
+                    "description": "Specifies order's shipping price",
+                    "type": "number"
+                },
+                "store_id": {
+                    "description": "Defines store id where the order should be assigned",
+                    "type": "string"
+                },
+                "subtotal_price": {
+                    "description": "Total price of all ordered products multiplied by their number, excluding tax, shipping price and discounts",
+                    "type": "number"
+                },
+                "tax_price": {
+                    "default": 0,
+                    "description": "The value of tax cost for order",
+                    "type": "number"
+                },
+                "total_paid": {
+                    "description": "Defines total paid amount for the order",
+                    "type": "number"
+                },
+                "total_price": {
+                    "description": "Defines order's total price",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "order_status",
+                "customer_email",
+                "bill_first_name",
+                "bill_last_name",
+                "bill_address_1",
+                "bill_city",
+                "bill_postcode",
+                "bill_state",
+                "bill_country",
+                "total_price"
+            ],
+            "type": "object"
+        }
+    }
+}

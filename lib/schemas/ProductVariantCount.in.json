@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "created_from": {
+            "required": false,
+            "type": "string"
+        },
+        "created_to": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_from": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_to": {
+            "required": false,
+            "type": "string"
+        },
+        "category_id": {
+            "required": false,
+            "type": "string"
+        },
+        "product_id": {
+            "required": false,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

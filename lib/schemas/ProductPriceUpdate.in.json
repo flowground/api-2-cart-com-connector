@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "group_prices": {
+                    "description": "Defines product's group prices",
+                    "items": {
+                        "properties": {
+                            "group_id": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "price": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "product_id": {
+                    "description": "Defines the product where the price has to be updated",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "product_id"
+            ],
+            "type": "object"
+        }
+    }
+}

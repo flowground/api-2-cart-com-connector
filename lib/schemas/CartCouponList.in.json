@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "start": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "date_start_from": {
+            "required": false,
+            "type": "string"
+        },
+        "date_start_to": {
+            "required": false,
+            "type": "string"
+        },
+        "date_end_from": {
+            "required": false,
+            "type": "string"
+        },
+        "date_end_to": {
+            "required": false,
+            "type": "string"
+        },
+        "avail": {
+            "required": false,
+            "type": "boolean"
+        },
+        "lang_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "force_all"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

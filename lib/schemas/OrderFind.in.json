@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "customer_id": {
+            "required": false,
+            "type": "string"
+        },
+        "customer_email": {
+            "required": false,
+            "type": "string"
+        },
+        "order_status": {
+            "required": false,
+            "type": "string"
+        },
+        "start": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "order_id,customer,totals,address,items,status"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        },
+        "created_to": {
+            "required": false,
+            "type": "string"
+        },
+        "created_from": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_to": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_from": {
+            "required": false,
+            "type": "string"
+        },
+        "financial_status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "pending",
+                "authorized",
+                "partially_paid",
+                "paid",
+                "partially_refunded",
+                "refunded",
+                "voided"
+            ]
+        }
+    }
+}

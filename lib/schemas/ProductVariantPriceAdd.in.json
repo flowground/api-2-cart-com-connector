@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "group_prices": {
+                    "description": "Defines variants's group prices",
+                    "items": {
+                        "properties": {
+                            "group_id": {
+                                "type": "string"
+                            },
+                            "price": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "description": "Defines the variant to which the price has to be added",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        }
+    }
+}

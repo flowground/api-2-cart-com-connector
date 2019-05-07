@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "group_prices": {
+                    "description": "Defines product's group prices",
+                    "items": {
+                        "properties": {
+                            "group_id": {
+                                "type": "string"
+                            },
+                            "price": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "product_id": {
+                    "description": "Defines the product to which the price has to be added",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "product_id"
+            ],
+            "type": "object"
+        }
+    }
+}

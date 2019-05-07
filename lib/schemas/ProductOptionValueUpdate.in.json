@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "option_value_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "price": {
+            "required": false,
+            "type": "number"
+        },
+        "quantity": {
+            "required": false,
+            "type": "number"
+        }
+    }
+}

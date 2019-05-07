@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "required": true,
+            "type": "string"
+        },
+        "type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "option_type_select",
+                "option_type_text",
+                "option_type_radio",
+                "option_type_checkbox",
+                "option_type_textarea",
+                "option_type_readonly",
+                "option_type_multiselect",
+                "option_type_multicheckbox",
+                "option_type_file",
+                "option_type_date",
+                "option_type_datetime",
+                "option_type_time"
+            ]
+        },
+        "product_id": {
+            "required": false,
+            "type": "string"
+        },
+        "option_values": {
+            "required": false,
+            "type": "string"
+        },
+        "description": {
+            "required": false,
+            "type": "string"
+        },
+        "avail": {
+            "required": false,
+            "type": "boolean",
+            "default": true
+        },
+        "sort_order": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "required": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

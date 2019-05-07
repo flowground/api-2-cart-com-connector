@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "start": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "created_from": {
+            "required": false,
+            "type": "string"
+        },
+        "created_to": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_from": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_to": {
+            "required": false,
+            "type": "string"
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "id,email,first_name,last_name"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        },
+        "group_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        },
+        "customer_list_id": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

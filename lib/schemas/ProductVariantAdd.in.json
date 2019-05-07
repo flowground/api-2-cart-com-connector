@@ -1,0 +1,104 @@
+{
+    "type": "object",
+    "properties": {
+        "product_id": {
+            "required": true,
+            "type": "string"
+        },
+        "name": {
+            "required": false,
+            "type": "string"
+        },
+        "model": {
+            "required": true,
+            "type": "string"
+        },
+        "price": {
+            "required": false,
+            "type": "number"
+        },
+        "attributes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "description": {
+            "required": false,
+            "type": "string"
+        },
+        "special_price": {
+            "required": false,
+            "type": "number"
+        },
+        "sprice_create": {
+            "required": false,
+            "type": "string"
+        },
+        "sprice_modified": {
+            "required": false,
+            "type": "string"
+        },
+        "sprice_expire": {
+            "required": false,
+            "type": "string"
+        },
+        "available_for_view": {
+            "required": false,
+            "type": "boolean",
+            "default": true
+        },
+        "available_for_sale": {
+            "required": false,
+            "type": "boolean",
+            "default": true
+        },
+        "weight": {
+            "required": false,
+            "type": "number",
+            "default": 0
+        },
+        "short_description": {
+            "required": false,
+            "type": "string"
+        },
+        "quantity": {
+            "required": false,
+            "type": "number",
+            "default": 0
+        },
+        "created_at": {
+            "required": false,
+            "type": "string"
+        },
+        "manufacturer": {
+            "required": false,
+            "type": "string"
+        },
+        "tax_class_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "meta_title": {
+            "required": false,
+            "type": "string"
+        },
+        "meta_keywords": {
+            "required": false,
+            "type": "string"
+        },
+        "meta_description": {
+            "required": false,
+            "type": "string"
+        },
+        "url": {
+            "required": false,
+            "type": "string"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "name": {
+                    "description": "Defines tax class name where tax has to be added",
+                    "type": "string"
+                },
+                "product_id": {
+                    "description": "Defines products specified by product id",
+                    "type": "string"
+                },
+                "tax_rates": {
+                    "description": "Defines tax rates of specified tax classes",
+                    "items": {
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "product_id",
+                "name",
+                "tax_rates"
+            ],
+            "type": "object"
+        }
+    }
+}

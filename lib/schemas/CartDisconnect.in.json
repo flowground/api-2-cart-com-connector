@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "delete_bridge": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

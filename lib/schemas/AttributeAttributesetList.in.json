@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "start": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "id,name"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

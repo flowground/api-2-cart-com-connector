@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "tax_class_id": {
+            "required": true,
+            "type": "string"
+        },
+        "params": {
+            "required": false,
+            "type": "string",
+            "default": "tax_class_id,name,avail"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

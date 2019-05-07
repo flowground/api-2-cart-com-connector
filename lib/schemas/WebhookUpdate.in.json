@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "callback": {
+            "required": false,
+            "type": "string"
+        },
+        "label": {
+            "required": false,
+            "type": "string"
+        },
+        "fields": {
+            "required": false,
+            "type": "string"
+        },
+        "active": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

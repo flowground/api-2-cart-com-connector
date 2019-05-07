@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "product_id": {
+            "required": true,
+            "type": "string"
+        },
+        "attribute_id": {
+            "required": false,
+            "type": "string"
+        },
+        "attribute_group_id": {
+            "required": false,
+            "type": "string"
+        },
+        "attribute_name": {
+            "required": false,
+            "type": "string"
+        },
+        "value": {
+            "required": false,
+            "type": "string"
+        },
+        "value_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "lang_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "store_id": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

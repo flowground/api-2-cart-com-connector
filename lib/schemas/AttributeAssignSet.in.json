@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "group_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "attribute_set_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

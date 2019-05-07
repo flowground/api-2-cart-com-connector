@@ -1,0 +1,1946 @@
+{
+    "title": "Swagger API2Cart",
+    "description": "API2Cart",
+    "docsUrl": "http://docs.api2cart.com",
+    "url": "https://api.apis.guru/v2/specs/api2cart.com/1.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.api2cart.com/v1.1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "api_key": {
+                "label": "api_key (api_key)",
+                "viewClass": "TextFieldView"
+            },
+            "store_key": {
+                "label": "store_key (store_key)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "AccountCartList": {
+            "main": "./lib/actions/AccountCartList.js",
+            "title": "Get list of carts.",
+            "description": "Get list of carts.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AccountCartList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AccountConfigUpdate": {
+            "main": "./lib/actions/AccountConfigUpdate.js",
+            "title": "Update configs in the API2Cart database.",
+            "description": "Update configs in the API2Cart database.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AccountConfigUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AccountFailedWebhooks": {
+            "main": "./lib/actions/AccountFailedWebhooks.js",
+            "title": "List webhooks that was not delivered to the callback.",
+            "description": "List webhooks that was not delivered to the callback.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AccountFailedWebhooks.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeAdd": {
+            "main": "./lib/actions/AttributeAdd.js",
+            "title": "Add new attribute",
+            "description": "Add new attribute",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeAssignGroup": {
+            "main": "./lib/actions/AttributeAssignGroup.js",
+            "title": "Assign attribute to the group",
+            "description": "Assign attribute to the group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeAssignGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeAssignSet": {
+            "main": "./lib/actions/AttributeAssignSet.js",
+            "title": "Assign attribute to the attribute set",
+            "description": "Assign attribute to the attribute set",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeAssignSet.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeAttributesetList": {
+            "main": "./lib/actions/AttributeAttributesetList.js",
+            "title": "Get attribute_set list",
+            "description": "Get attribute_set list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeAttributesetList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeCount": {
+            "main": "./lib/actions/AttributeCount.js",
+            "title": "Get attributes count",
+            "description": "Get attributes count",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeDelete": {
+            "main": "./lib/actions/AttributeDelete.js",
+            "title": "Delete attribute from store",
+            "description": "Delete attribute from store",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeGroupList": {
+            "main": "./lib/actions/AttributeGroupList.js",
+            "title": "Get attribute group list",
+            "description": "Get attribute group list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeGroupList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeInfo": {
+            "main": "./lib/actions/AttributeInfo.js",
+            "title": "Get attribute info",
+            "description": "Get attribute info",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeList": {
+            "main": "./lib/actions/AttributeList.js",
+            "title": "Get attributes list",
+            "description": "Get attributes list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeTypeList": {
+            "main": "./lib/actions/AttributeTypeList.js",
+            "title": "Get list of supported attributes types",
+            "description": "Get list of supported attributes types",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeTypeList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeUnassignGroup": {
+            "main": "./lib/actions/AttributeUnassignGroup.js",
+            "title": "Unassign attribute from group",
+            "description": "Unassign attribute from group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeUnassignGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "AttributeUnassignSet": {
+            "main": "./lib/actions/AttributeUnassignSet.js",
+            "title": "Unassign attribute from attribute set",
+            "description": "Unassign attribute from attribute set",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/AttributeUnassignSet.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "BasketItemAdd": {
+            "main": "./lib/actions/BasketItemAdd.js",
+            "title": "Add item to basket",
+            "description": "Add item to basket",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/BasketItemAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "BridgeDelete": {
+            "main": "./lib/actions/BridgeDelete.js",
+            "title": "Delete bridge from the store.",
+            "description": "Delete bridge from the store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/BridgeDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "BridgeDownload": {
+            "main": "./lib/actions/BridgeDownload.js",
+            "title": "Download bridge for store",
+            "description": "Download bridge for store",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/BridgeDownload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "BridgeUpdate": {
+            "main": "./lib/actions/BridgeUpdate.js",
+            "title": "Update bridge in the store.",
+            "description": "Update bridge in the store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/BridgeUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartBridge": {
+            "main": "./lib/actions/CartBridge.js",
+            "title": "Get bridge key and store key",
+            "description": "Get bridge key and store key",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartBridge.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartClearCache": {
+            "main": "./lib/actions/CartClearCache.js",
+            "title": "Clear cache on store.",
+            "description": "Clear cache on store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartClearCache.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartConfig": {
+            "main": "./lib/actions/CartConfig.js",
+            "title": "Get list of cart configs",
+            "description": "Get list of cart configs",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartConfig.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartConfigUpdate": {
+            "main": "./lib/actions/CartConfigUpdate.js",
+            "title": "Use this API method to update custom data in client database.",
+            "description": "Use this API method to update custom data in client database.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartConfigUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartCouponAdd": {
+            "main": "./lib/actions/CartCouponAdd.js",
+            "title": "Create new coupon",
+            "description": "Create new coupon",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartCouponAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartCouponCount": {
+            "main": "./lib/actions/CartCouponCount.js",
+            "title": "Get cart coupons count.",
+            "description": "Get cart coupons count.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartCouponCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartCouponDelete": {
+            "main": "./lib/actions/CartCouponDelete.js",
+            "title": "Delete coupon",
+            "description": "Delete coupon",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartCouponDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartCouponList": {
+            "main": "./lib/actions/CartCouponList.js",
+            "title": "Get cart coupon discounts.",
+            "description": "Get cart coupon discounts.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartCouponList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartCreate": {
+            "main": "./lib/actions/CartCreate.js",
+            "title": "Add store to the account",
+            "description": "Add store to the account",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartCreate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartDelete": {
+            "main": "./lib/actions/CartDelete.js",
+            "title": "Remove store from API2Cart",
+            "description": "Remove store from API2Cart",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartDisconnect": {
+            "main": "./lib/actions/CartDisconnect.js",
+            "title": "Disconnect with the store and clear store session data.",
+            "description": "Disconnect with the store and clear store session data.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartDisconnect.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartGiftcardAdd": {
+            "main": "./lib/actions/CartGiftcardAdd.js",
+            "title": "Create new gift card",
+            "description": "Create new gift card",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartGiftcardAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartGiftcardCount": {
+            "main": "./lib/actions/CartGiftcardCount.js",
+            "title": "Get gift cards count.",
+            "description": "Get gift cards count.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartGiftcardCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartGiftcardList": {
+            "main": "./lib/actions/CartGiftcardList.js",
+            "title": "Get gift cards list.",
+            "description": "Get gift cards list.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartGiftcardList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartInfo": {
+            "main": "./lib/actions/CartInfo.js",
+            "title": "Get cart information",
+            "description": "Get cart information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartList": {
+            "main": "./lib/actions/CartList.js",
+            "title": "Get list of supported carts",
+            "description": "Get list of supported carts",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartMethods": {
+            "main": "./lib/actions/CartMethods.js",
+            "title": "Get list of cart methods",
+            "description": "Get list of cart methods",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartMethods.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartPluginList": {
+            "main": "./lib/actions/CartPluginList.js",
+            "title": "Get list of installed plugins",
+            "description": "Get list of installed plugins",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartPluginList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CartValidate": {
+            "main": "./lib/actions/CartValidate.js",
+            "title": "Check store availability, bridge connection for the downloadable carts, identify DB prefix, validate API accesses for API carts.",
+            "description": "Check store availability, bridge connection for the downloadable carts, identify DB prefix, validate API accesses for API carts.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CartValidate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryAdd": {
+            "main": "./lib/actions/CategoryAdd.js",
+            "title": "Add new category in store",
+            "description": "Add new category in store",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryAssign": {
+            "main": "./lib/actions/CategoryAssign.js",
+            "title": "Assign category to product",
+            "description": "Assign category to product",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryAssign.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryCount": {
+            "main": "./lib/actions/CategoryCount.js",
+            "title": "Count categories in store.",
+            "description": "Count categories in store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryDelete": {
+            "main": "./lib/actions/CategoryDelete.js",
+            "title": "Delete category in store",
+            "description": "Delete category in store",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryFind": {
+            "main": "./lib/actions/CategoryFind.js",
+            "title": "Search category in store. \"Laptop\" is specified here by default.",
+            "description": "Search category in store. \"Laptop\" is specified here by default.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryFind.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryImageAdd": {
+            "main": "./lib/actions/CategoryImageAdd.js",
+            "title": "Add image to category",
+            "description": "Add image to category",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryImageAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryImageDelete": {
+            "main": "./lib/actions/CategoryImageDelete.js",
+            "title": "Delete image",
+            "description": "Delete image",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryImageDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryInfo": {
+            "main": "./lib/actions/CategoryInfo.js",
+            "title": "Get category info about category ID*** or specify other category ID.",
+            "description": "Get category info about category ID*** or specify other category ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryList": {
+            "main": "./lib/actions/CategoryList.js",
+            "title": "Get list of categories from store. Returns 4 categories by default.",
+            "description": "Get list of categories from store. Returns 4 categories by default.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryUnassign": {
+            "main": "./lib/actions/CategoryUnassign.js",
+            "title": "Unassign category to product",
+            "description": "Unassign category to product",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryUnassign.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CategoryUpdate": {
+            "main": "./lib/actions/CategoryUpdate.js",
+            "title": "Update category in store",
+            "description": "Update category in store",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CategoryUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CustomerAdd": {
+            "main": "./lib/actions/CustomerAdd.js",
+            "title": "Add customer into store.",
+            "description": "Add customer into store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CustomerAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CustomerCount": {
+            "main": "./lib/actions/CustomerCount.js",
+            "title": "Get number of customers from store.",
+            "description": "Get number of customers from store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CustomerCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CustomerFind": {
+            "main": "./lib/actions/CustomerFind.js",
+            "title": "Find customers in store.",
+            "description": "Find customers in store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CustomerFind.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CustomerInfo": {
+            "main": "./lib/actions/CustomerInfo.js",
+            "title": "Get customers' details from store.",
+            "description": "Get customers' details from store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CustomerInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CustomerList": {
+            "main": "./lib/actions/CustomerList.js",
+            "title": "Get list of customers from store.",
+            "description": "Get list of customers from store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CustomerList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderAbandonedList": {
+            "main": "./lib/actions/OrderAbandonedList.js",
+            "title": "Get list of orders that were left by customers before completing the order.",
+            "description": "Get list of orders that were left by customers before completing the order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderAbandonedList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderAdd": {
+            "main": "./lib/actions/OrderAdd.js",
+            "title": "Add a new order to the cart.",
+            "description": "Add a new order to the cart.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderCount": {
+            "main": "./lib/actions/OrderCount.js",
+            "title": "Count orders in store",
+            "description": "Count orders in store",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderFinancialStatusList": {
+            "main": "./lib/actions/OrderFinancialStatusList.js",
+            "title": "Retrieve list of financial statuses",
+            "description": "Retrieve list of financial statuses",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderFinancialStatusList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderFind": {
+            "main": "./lib/actions/OrderFind.js",
+            "title": "Find orders",
+            "description": "Find orders",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderFind.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderInfo": {
+            "main": "./lib/actions/OrderInfo.js",
+            "title": "Info about a specific order by ID",
+            "description": "Info about a specific order by ID",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderList": {
+            "main": "./lib/actions/OrderList.js",
+            "title": "Get list of orders from store. Returns 4 orders by default.",
+            "description": "Get list of orders from store. Returns 4 orders by default.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderRefundAdd": {
+            "main": "./lib/actions/OrderRefundAdd.js",
+            "title": "Add a refund to the order.",
+            "description": "Add a refund to the order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderRefundAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderShipmentAdd": {
+            "main": "./lib/actions/OrderShipmentAdd.js",
+            "title": "Add a shipment to the order.",
+            "description": "Add a shipment to the order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderShipmentAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderShipmentList": {
+            "main": "./lib/actions/OrderShipmentList.js",
+            "title": "Get list of shipments by orders.",
+            "description": "Get list of shipments by orders.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderShipmentList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderShipmentUpdate": {
+            "main": "./lib/actions/OrderShipmentUpdate.js",
+            "title": "Update order's shipment information.",
+            "description": "Update order's shipment information.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderShipmentUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderStatusList": {
+            "main": "./lib/actions/OrderStatusList.js",
+            "title": "Retrieve list of statuses",
+            "description": "Retrieve list of statuses",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderStatusList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderUpdate": {
+            "main": "./lib/actions/OrderUpdate.js",
+            "title": "Update existing order.",
+            "description": "Update existing order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OrderUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductAdd": {
+            "main": "./lib/actions/ProductAdd.js",
+            "title": "Add new product to store.",
+            "description": "Add new product to store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductAttributeList": {
+            "main": "./lib/actions/ProductAttributeList.js",
+            "title": "Get list of attributes.",
+            "description": "Get list of attributes.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductAttributeList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductAttributeValueSet": {
+            "main": "./lib/actions/ProductAttributeValueSet.js",
+            "title": "Set attribute value to product.",
+            "description": "Set attribute value to product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductAttributeValueSet.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductChildItemFind": {
+            "main": "./lib/actions/ProductChildItemFind.js",
+            "title": "Search product child item (bundled item or configurable product variant) in store catalog.",
+            "description": "Search product child item (bundled item or configurable product variant) in store catalog.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductChildItemFind.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductChildItemList": {
+            "main": "./lib/actions/ProductChildItemList.js",
+            "title": "Get child items list of specific product.",
+            "description": "Get child items list of specific product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductChildItemList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductCount": {
+            "main": "./lib/actions/ProductCount.js",
+            "title": "Count products in store.",
+            "description": "Count products in store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductCurrencyAdd": {
+            "main": "./lib/actions/ProductCurrencyAdd.js",
+            "title": "Add currency and/or set default in store",
+            "description": "Add currency and/or set default in store",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductCurrencyAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductCurrencyList": {
+            "main": "./lib/actions/ProductCurrencyList.js",
+            "title": "Get list of currencies",
+            "description": "Get list of currencies",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductCurrencyList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductDelete": {
+            "main": "./lib/actions/ProductDelete.js",
+            "title": "Product delete",
+            "description": "Product delete",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductFields": {
+            "main": "./lib/actions/ProductFields.js",
+            "title": "Retrieve all available fields for product item in store.",
+            "description": "Retrieve all available fields for product item in store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductFields.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductFind": {
+            "main": "./lib/actions/ProductFind.js",
+            "title": "Search product in store catalog. \"Apple\" is specified here by default.",
+            "description": "Search product in store catalog. \"Apple\" is specified here by default.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductFind.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductImageAdd": {
+            "main": "./lib/actions/ProductImageAdd.js",
+            "title": "Add image to product",
+            "description": "Add image to product",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductImageAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductImageDelete": {
+            "main": "./lib/actions/ProductImageDelete.js",
+            "title": "Delete image",
+            "description": "Delete image",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductImageDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductImageUpdate": {
+            "main": "./lib/actions/ProductImageUpdate.js",
+            "title": "Update details of image",
+            "description": "Update details of image",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductImageUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductInfo": {
+            "main": "./lib/actions/ProductInfo.js",
+            "title": "Get product info about product ID *** or specify other product ID.",
+            "description": "Get product info about product ID *** or specify other product ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductList": {
+            "main": "./lib/actions/ProductList.js",
+            "title": "Get list of products from your store. Returns 4 products by default.",
+            "description": "Get list of products from your store. Returns 4 products by default.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductManufacturerAdd": {
+            "main": "./lib/actions/ProductManufacturerAdd.js",
+            "title": "Add manufacturer to store and assign to product",
+            "description": "Add manufacturer to store and assign to product",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductManufacturerAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductOptionAdd": {
+            "main": "./lib/actions/ProductOptionAdd.js",
+            "title": "Add product option from store.",
+            "description": "Add product option from store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductOptionAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductOptionAssign": {
+            "main": "./lib/actions/ProductOptionAssign.js",
+            "title": "Assign option from product.",
+            "description": "Assign option from product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductOptionAssign.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductOptionList": {
+            "main": "./lib/actions/ProductOptionList.js",
+            "title": "Get list of options.",
+            "description": "Get list of options.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductOptionList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductOptionValueAdd": {
+            "main": "./lib/actions/ProductOptionValueAdd.js",
+            "title": "Add product option item from option.",
+            "description": "Add product option item from option.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductOptionValueAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductOptionValueAssign": {
+            "main": "./lib/actions/ProductOptionValueAssign.js",
+            "title": "Assign product option item from product.",
+            "description": "Assign product option item from product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductOptionValueAssign.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductOptionValueUpdate": {
+            "main": "./lib/actions/ProductOptionValueUpdate.js",
+            "title": "Update product option item from option.",
+            "description": "Update product option item from option.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductOptionValueUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductPriceAdd": {
+            "main": "./lib/actions/ProductPriceAdd.js",
+            "title": "Add some prices to the product.",
+            "description": "Add some prices to the product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductPriceAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductPriceDelete": {
+            "main": "./lib/actions/ProductPriceDelete.js",
+            "title": "Delete some prices of the product",
+            "description": "Delete some prices of the product",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductPriceDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductPriceUpdate": {
+            "main": "./lib/actions/ProductPriceUpdate.js",
+            "title": "Update some prices of the product.",
+            "description": "Update some prices of the product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductPriceUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductReviewList": {
+            "main": "./lib/actions/ProductReviewList.js",
+            "title": "Get reviews of a specific product.",
+            "description": "Get reviews of a specific product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductReviewList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductTaxAdd": {
+            "main": "./lib/actions/ProductTaxAdd.js",
+            "title": "Add tax class and tax rate to store and assign to product.",
+            "description": "Add tax class and tax rate to store and assign to product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductTaxAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductUpdate": {
+            "main": "./lib/actions/ProductUpdate.js",
+            "title": "Update price and quantity for a specific product",
+            "description": "Update price and quantity for a specific product",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantAdd": {
+            "main": "./lib/actions/ProductVariantAdd.js",
+            "title": "Add variant to product.",
+            "description": "Add variant to product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantCount": {
+            "main": "./lib/actions/ProductVariantCount.js",
+            "title": "Get count variants.",
+            "description": "Get count variants.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantDelete": {
+            "main": "./lib/actions/ProductVariantDelete.js",
+            "title": "Delete variant.",
+            "description": "Delete variant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantInfo": {
+            "main": "./lib/actions/ProductVariantInfo.js",
+            "title": "Get variant info.",
+            "description": "Get variant info.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantList": {
+            "main": "./lib/actions/ProductVariantList.js",
+            "title": "Get list variants.",
+            "description": "Get list variants.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantPriceAdd": {
+            "main": "./lib/actions/ProductVariantPriceAdd.js",
+            "title": "Add some prices to the product variant.",
+            "description": "Add some prices to the product variant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantPriceAdd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantPriceDelete": {
+            "main": "./lib/actions/ProductVariantPriceDelete.js",
+            "title": "Delete some prices of the product variant.",
+            "description": "Delete some prices of the product variant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantPriceDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantPriceUpdate": {
+            "main": "./lib/actions/ProductVariantPriceUpdate.js",
+            "title": "Update some prices of the product variant.",
+            "description": "Update some prices of the product variant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantPriceUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductVariantUpdate": {
+            "main": "./lib/actions/ProductVariantUpdate.js",
+            "title": "Update variant.",
+            "description": "Update variant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductVariantUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "TaxClassInfo": {
+            "main": "./lib/actions/TaxClassInfo.js",
+            "title": "Get info about tax",
+            "description": "Get info about tax",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/TaxClassInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "WebhookCount": {
+            "main": "./lib/actions/WebhookCount.js",
+            "title": "Count registered webhooks on the store.",
+            "description": "Count registered webhooks on the store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/WebhookCount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "WebhookCreate": {
+            "main": "./lib/actions/WebhookCreate.js",
+            "title": "Create webhook on the store and subscribe to it.",
+            "description": "Create webhook on the store and subscribe to it.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/WebhookCreate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "WebhookDelete": {
+            "main": "./lib/actions/WebhookDelete.js",
+            "title": "Delete registered webhook on the store.",
+            "description": "Delete registered webhook on the store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/WebhookDelete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "WebhookEvents": {
+            "main": "./lib/actions/WebhookEvents.js",
+            "title": "List all Webhooks that are available on this store.",
+            "description": "List all Webhooks that are available on this store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/WebhookEvents.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "WebhookList": {
+            "main": "./lib/actions/WebhookList.js",
+            "title": "List registered webhook on the store.",
+            "description": "List registered webhook on the store.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/WebhookList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "WebhookUpdate": {
+            "main": "./lib/actions/WebhookUpdate.js",
+            "title": "Update Webhooks parameters.",
+            "description": "Update Webhooks parameters.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/WebhookUpdate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
