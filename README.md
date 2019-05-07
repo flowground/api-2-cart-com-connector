@@ -1,11 +1,11 @@
-# ![LOGO](logo.png) Swagger API2Cart MSP Connector
+# ![LOGO](logo.png) Swagger API2Cart **flow**ground Connector
 
 ## Description
 
-A generated MSP connector for the Swagger API2Cart API (version 1.0.0).
+A generated **flow**ground connector for the Swagger API2Cart API (version 1.0.0).
 
 Generated from: https://api.apis.guru/v2/specs/api2cart.com/1.0.0/swagger.json<br/>
-Generated at: 2019-05-07T11:16:57+03:00
+Generated at: 2019-05-07T17:36:36+03:00
 
 ## API Description
 
@@ -1271,7 +1271,7 @@ Supported authorization schemes:
 
 ## License
 
-flowground :- Telekom iPaaS / api-2-cart-com-connector<br/>
+**flow**ground :- Telekom iPaaS / api-2-cart-com-connector<br/>
 Copyright © 2019, [Deutsche Telekom AG](https://www.telekom.de)<br/>
 contact: flowground@telekom.de
 
